@@ -7,8 +7,9 @@
 </head>
 <body>
 
+
 	
-	<section>
+	<section id="paginaPerguntas">
 
 		<article>
 			<header>
@@ -19,10 +20,25 @@
 		<h3 id="respostas" >0</h3>
 
 			</header>
+				<div id="paginaFinal" >
+  				<p>PAGINA FINAL</p>
+				</div>
 
-		<div id="questdiv">
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-		</div>
+
+
+			<div id="questdiv">
+			<p id="q1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+			<p id = "q2"> está é a minha segunda pergunta</p>
+			<p id = "q3">esta é a minha terceira pergunta</p>
+			<p id = "q4">esta e minha quarta pergunta</p>
+			<p id = "q5">esta é minha quinta pergunta</p>
+			<p id = "q6">esta é minha sexta pergunta</p>
+			<p id = "q7">esta é minha setima pergunta</p>
+			<p id = "q8">esta é minha oitava pergunta</p>
+			<p id = "q9">esta é minha nona pergunta</p>
+			<p id = "q10">esta é minha ultima pergunta</p>
+		</div>	
 			
 		<div id="ansdiv">
 			<button onclick="getAns(opA)" class="ops" id="op1" type="button">#OP1</button>
@@ -30,7 +46,7 @@
 			<button onclick="getAns(opC)" class="ops" id="op3" type="button">#OP3</button>
 			<button onclick="getAns(opD)" class="ops" id="op4" type="button">#OP4</button>
 		</div>
-			<a onclick="validade(userAns)" href="#" id="next">Proxima Pergunta</a>
+			<a onclick="validade(userAns); nextQ(qstList);" href="#" id="next">Proxima Pergunta</a>
 		</article>
 	</section>
 	

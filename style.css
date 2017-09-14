@@ -78,3 +78,16 @@ h2{
 #respostas{
 	font-size: 30px;
 }
+#q2,#q3,#q4,#q5,#q6,#q7,#q8,#q9,#q10{
+	display: none
+}
+#paginaFinal{
+ 	width: 70%;
+	background-color: #5AB1EE;
+	height: 1000px;
+	position: absolute;
+	left: 15%;
+	text-align:center;
+	box-shadow: 0 19px 38px rgba(0,0,0,0.50), 0 15px 12px rgba(0,0,0,0.30);
+	display: none;
+}
