@@ -1,0 +1,80 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-family: sans-serif;
+}
+section{
+	width: 70%;
+	background-color: #5AB1EE;
+	height: 1000px;
+	position: absolute;
+	left: 15%;
+	text-align:center;
+	box-shadow: 0 19px 38px rgba(0,0,0,0.50), 0 15px 12px rgba(0,0,0,0.30);
+
+}
+#start{
+
+}
+header{
+	display: flex;
+	justify-content: flex-end;
+}
+h1{
+	order: 2;
+	margin: 2em;
+
+}
+h2{
+	order: 1;
+	margin: 1em 36% 0 0
+}
+#questdiv{
+	text-align:center;
+	width: 50%;
+	background-color: lightcoral;
+	padding: 2em 5em;
+	margin: 2em 0 0 15em;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+#ansdiv{
+	position: relative;
+	top: 70px;
+	padding: 2em 5em;
+	flex-wrap: wrap;
+	display:flex;
+	width: 67.5%;
+	margin: 2em 0 0 10em;
+
+}
+.ops{
+	width: 45%;
+	background-color: lightcoral;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	margin: 8px 5px;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	border: none;
+	display: block;
+	
+}
+.ops:hover{
+  	transition: box-shadow 0.2s ease-in-out;
+  	box-shadow: 0 15px 25px rgba(0,0,0,0.30), 0 10px 10px rgba(0,0,0,0.25);
+}
+#next{
+	position: relative;
+	top: 150px;
+}
+
+
+#teste.clicked{
+	display: none;
+
+}
+.ops:focus{
+	background-color: #e63e00;
+}
+#respostas{
+	font-size: 30px;
+}
