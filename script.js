@@ -1,20 +1,34 @@
-var correct = ["a","c","d","b"]
-var userAns = ["a"]
-var lastAns = []
+const correct = ["b","c","d","b","a","c","a","e","b","b"];
+const qstList = [10,9,8,7,6,5,4,3,2,1];
+var acertos = 0
+var userAns = ["a"];
+var lastAns = [];
 var opA = "a"
-var opB = "b"
-var opC = "c"
-var opD = "d"
-qstList = [10,9,8,7,6,5,4,3,2,1]
-var opSelected = false
+  , opB = "b"
+  , opC = "c"
+  , opD = "d";
+var opSelected = false;
+
+
+
+function checkAns(correct, userAns){
+	var i = 0
+	while (i < correct.length){
+  if (correct[i] === userAns[i]){
+		acertos++
+  }
+  i++;
+	}
+	return acertos
+}
 
 
 /* FUNCAO PARA COLOCAR TODAS AS SELECOES DO USUARIO EM UMA LISTA*/
-function getAns(op){ 
-	userAns[0] = op
-	opSelected = true
-	console.log(userAns)
-	return userAns
+function getAns(op){
+	userAns[0] = op;
+	opSelected = true;
+	console.log(userAns);
+	return userAns;
 	/*userAns.push(op)
 	return console.log(userAns);*/
 }
@@ -25,21 +39,25 @@ function addAns(last){
 
 /*FUNCAO PARA PASSAR O ULTIMO ELEMENTO DA LISTA DE SELECOES (RESPOSTA FINAL) DO USUARIO
 PARA UMA OUTRA LISTA, QUE IRA CONTER SOMENTE A RESPOSTA FINAL DAS QUESTOES.*/
-/*function validade(lastOp){ 			  
+/*function validade(lastOp){
 	lastAns.push(userAns[userAns.length - 1])
 	console.log(lastAns)
-	return lastAns	
+	return lastAns
 }
 */
 /*FUNCAO PARA SUMIR COM A ULTIMA PERGUNTA E COLOCAR A NOVA NA TELA, ATRAVES DA DIMINUICAO DE UMA LISTA*/
-function nextQ(qstList, userAns){ 
+function nextQ(qstList, userAns){
 	if (opSelected === true){
 		addAns(lastAns)
 
 		if (qstList.length === 1){
+			result = checkAns(correct, lastAns)
+
 			document.getElementById("paginaPerguntas").style.display = "none"
-			document.getElementById('paginaFinal').style.display = "flex"
-			return	
+			document.getElementById('paginaFinal').style.display = "block"
+			document.getElementById("corretas").innerHTML ="REPSOTAS CORRETAS:"+result
+			document.getElementById("incorretas").innerHTML ="REPSOTAS INCORRETAS:"+(10-result)
+			return
 		}
 		document.getElementById("q"+qstList[qstList.length-1]).style.display = "none"
 		document.getElementById("q"+qstList[qstList.length-2]).style.display = "block"
@@ -49,3 +67,26 @@ function nextQ(qstList, userAns){
 		return opSelected = false
 	}
 }
+/*---------ANSWERS QUESTION1---------*/
+	document.getElementById("op1").innerHTML = "Boltons"
+	document.getElementById("op2").innerHTML = "Starks"
+	document.getElementById("op3").innerHTML = "Mormonts"
+	document.getElementById("op4").innerHTML = "Karstarks"
+function opsss(){
+	/*---------ANSWERS QUESTION2---------*/
+	if (qstList[qstList.length-1] === 2){
+		document.getElementById("op1").innerHTML = "Robb"
+		document.getElementById("op2").innerHTML = "Sansa"
+		document.getElementById("op3").innerHTML = "Jon"
+		document.getElementById("op4").innerHTML = "Arya"
+		console.log(qstList[qstList.length-1])
+	}
+		/*---------ANSWERS QUESTION2---------*/
+	if (qstList[qstList.length-1] === 3){
+		document.getElementById("op1").innerHTML = "Drogo, Viserion e Aegon"
+		document.getElementById("op2").innerHTML = "Dracarys, Viserys e Drogon"
+		document.getElementById("op3").innerHTML = "Drogon, Viserion e Rhaegal"
+		document.getElementById("op4").innerHTML = "Aegon, Dracarys e Drogon."
+		}
+}
+	console.log(qstList[qstList.length-1])
