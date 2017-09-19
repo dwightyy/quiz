@@ -55,8 +55,15 @@ function nextQ(qstList, userAns){
 
 			document.getElementById("paginaPerguntas").style.display = "none"
 			document.getElementById('paginaFinal').style.display = "block"
-			document.getElementById("corretas").innerHTML ="REPSOTAS CORRETAS:"+result
-			document.getElementById("incorretas").innerHTML ="REPSOTAS INCORRETAS:"+(10-result)
+      //abaixo geraçao do grafico
+      tamAcertos =  document.getElementById("acertos")
+      tamErros = document.getElementById("erros")
+      deltaAcertos = 300-(result*30)
+      deltaErros = 300-((10-result)*30)
+      tamAcertos.style.height = (result*30) + "px"
+      tamErros.style.height = ((10-result)*30) + "px"
+      tamAcertos.style.top = deltaAcertos + "px"
+      tamErros.style.top = deltaErros + "px"
 			return
 		}
 		document.getElementById("q"+qstList[qstList.length-1]).style.display = "none"
@@ -66,6 +73,12 @@ function nextQ(qstList, userAns){
 		console.log(userAns,"ultima")
 		return opSelected = false
 	}
+}
+//FUNCAO PARA GERAR GRAFICO NA PAGINA FINAL
+function geraGraph(){
+  var altura =  document.getElementById("coluna1")
+  document.getElementById("coluna1").style.height = "100px"
+  altura.style.top = x + "px"
 }
 /*---------ANSWERS QUESTION1---------*/
 	document.getElementById("op1").innerHTML = "Boltons"

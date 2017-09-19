@@ -109,3 +109,37 @@ h2{
 #corretas, #incorretas{
 	font-size: 32px;
 }
+
+.colunas{
+  width:70px;
+  height: 300px;
+	border: solid 1px rgba(0, 0, 0,0.20);
+  border-radius:5px;
+  border-top-left-radius:5px;
+}
+.colunas:hover{
+	border: solid 0.5px rgba(0, 0, 0,0.50);
+}
+#erros{
+  position:relative;
+	background-color: rgb(233, 98, 22);
+	margin-left: 30px;
+}
+#acertos{
+  position:relative;
+	background-color: rgb(116, 167, 32);
+	margin-right: 30px;
+}
+#container{
+	height: 300px;
+  width:200px;
+  display:flex;
+  justify-content:space-between;
+	margin: auto;
+	position: relative;
+	top: 100px;
+}
+hr{
+	position: relative;
+	top:100px;
+}
