@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>QUIZ</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+</head>
+<body>
+	<section>
+		<article id="paginaPerguntas">
+			<header>
+				<h1>Quiz sobre<br/>GAME OF THRONES</h1>
+				
+			</header>
+		<div id="questdiv">
+			<p id="q1">Qual o nome da familia que mantém o titulo de guardiões do norte
+			no inicio da série?</p>
+			<p id = "q2">Qual o nome do filho(a) mais velho(a) de Ned Stark?</p>
+			<p id = "q3">Qual é o nome dos dragões de Daenerys Targaryen?</p>
+			<p id = "q4">esta e minha quarta pergunta</p>
+			<p id = "q5">esta é minha quinta pergunta</p>
+			<p id = "q6">esta é minha sexta pergunta</p>
+			<p id = "q7">esta é minha setima pergunta</p>
+			<p id = "q8">esta é minha oitava pergunta</p>
+			<p id = "q9">esta é minha nona pergunta</p>
+			<p id = "q10">esta é minha ultima pergunta</p>
+		</div>
+
+		<div id="ansdiv">
+			<button onclick="getAns(opA)" class="ops" id="op1" type="button">#OP1</button>
+			<button onclick="getAns(opB)" class="ops" id="op2" type="button">#OP2</button>
+			<button onclick="getAns(opC)" class="ops" id="op3" type="button">#OP3</button>
+			<button onclick="getAns(opD)" class="ops" id="op4" type="button">#OP4</button>
+		</div>
+			<button onclick=" nextQ(qstList,userAns); opsss()" href="#" id="next">Proxima Pergunta</button>
+		</article>
+
+		<article id="paginaFinal" >
+			<div id="container" >
+				<p></p>
+				<div id="acertos" class="colunas" >Acertos</div>
+				<div id="erros" class="colunas" >Erros</div>
+			</div>
+			<hr>
+
+		</article>
+
+	</section>
+
+
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
