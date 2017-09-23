@@ -20,15 +20,12 @@ header{
 	display: flex;
 	justify-content: flex-end;
 }
-h1{
-	order: 2;
-	margin: 2em;
 
-}
-h2{
+h1{
 	order: 1;
 	margin: 1em 34% 0 0
 }
+
 #questdiv{
 	text-align:center;
 	width: 50%;
@@ -142,4 +139,25 @@ h2{
 hr{
 	position: relative;
 	top:100px;
+}
+
+
+/*------------------------MEDIAS------------------------*/
+@media all and (max-width: 1366px) {
+	h1{
+		margin: 1em 40% 0 0;
+	}
+	#ansdiv{
+		margin: 2em 0 0 9%;
+	}
+
+}
+
+@media all and (max-width: 1125px){
+	#ansdiv{
+		margin: 2em 0 0 7%;
+	}
+	#questdiv{
+		font-size: 28px;
+	}
 }
