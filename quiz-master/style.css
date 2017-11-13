@@ -3,14 +3,14 @@
 	margin: 0;
 	font-family: sans-serif;
 }
-article{
+#paginaPerguntas{
 	width: 70%;
-	background-color: #5AB1EE;
+	background-color: rgb(143, 152, 157);
 	height: 1000px;
-	position: absolute;
-	left: 15%;
+	margin: auto;
 	text-align:center;
 	box-shadow: 0 19px 38px rgba(0,0,0,0.50), 0 15px 12px rgba(0,0,0,0.30);
+	display: block;
 
 }
 #start{
@@ -23,35 +23,34 @@ header{
 
 h1{
 	order: 1;
-	margin: 1em 34% 0 0
+	margin:auto;
+	padding: 3% 0;
 }
 
 #questdiv{
 	text-align:center;
 	width: 50%;
-	height: 150px;
-	background-color: lightcoral;
+	height: auto;
+	background-color: rgb(130, 154, 166);
 	font-size: 32px;
 	padding: 2% 6%;
-	margin: 2% 0 0 18%;
+	margin: auto;
 	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 #ansdiv{
-	position: relative;
-	top: 70px;
-	padding: 2em 5em;
 	flex-wrap: wrap;
 	display:flex;
-	width: 67.5%;
+	width: 68%;
 	height: 150px;
-	margin: 2em 0 0 10em;
+	margin: auto;
+	padding: 25% 0 7% 0;
 }
 .ops{
-	width: 45%;
-	background-color: lightcoral;
+	width: 41%;
+	background-color: rgb(130, 154, 166);
 	padding-top: 1em;
 	padding-bottom: 1em;
-	margin: 8px 5px;
+	margin: auto;
 	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 	font-size: 18px;
 	border: none;
@@ -61,21 +60,19 @@ h1{
 .ops:hover{
   	transition: box-shadow 0.2s ease-in-out;
   	box-shadow: 0 15px 25px rgba(0,0,0,0.30), 0 10px 10px rgba(0,0,0,0.25);
-		background-color: rgba(221, 106, 71, 0.9)
+		background-color: rgb(102, 102, 98)
 }
 #next{
 	width: 20%;
-	background-color: lightcoral;
+	background-color: rgb(130, 154, 166);
 	padding-top: 1em;
 	padding-bottom: 1em;
-	margin: 8px 5px;
+	margin: auto;
 	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 	font-size: 18px;
 	border: none;
 	display: block;
-	position: relative;
-	top: 150px;
-	left:39%;
+	min-width: 100px;
 }
 
 
@@ -84,7 +81,7 @@ h1{
 
 }
 .ops:focus{
-	background-color: #e63e00;
+	background-color: rgb(102, 102, 98);
 
 }
 #respostas{
@@ -95,22 +92,32 @@ h1{
 }
 #paginaFinal{
  	width: 70%;
-	background-color: #5AB1EE;
+	background-color: rgb(143, 152, 157);
 	height: 1000px;
-	position: absolute;
-	left: 15%;
 	text-align:center;
 	box-shadow: 0 19px 38px rgba(0,0,0,0.50), 0 15px 12px rgba(0,0,0,0.30);
 	display: none;
+	flex-wrap: wrap;
+	margin:auto;
 }
 #corretas, #incorretas{
 	font-size: 32px;
 }
+img{
+	width: 500px;
+	height: 300px;
+	opacity: 0;
+	position:absolute;
+	right: 100px;
+	margin-top:20px;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
 
 .colunas{
   width:70px;
   height: 300px;
-	border: solid 1px rgba(0, 0, 0,0.20);
+  border: solid 1px rgba(0, 0, 0,0.20);
   border-radius:5px;
   border-top-left-radius:5px;
 }
@@ -130,34 +137,88 @@ h1{
 #container{
 	height: 300px;
   width:200px;
-  display:flex;
+  display:none;
   justify-content:space-between;
 	margin: auto;
 	position: relative;
 	top: 100px;
 }
-hr{
+.resps{
+	background-color: rgb(130, 154, 166);
+	margin: 10px;
+	width: 245px;
+	height: 180px;
+	box-shadow: 0 19px 38px rgba(0,0,0,0.50), 0 15px 12px rgba(0,0,0,0.30);
+	display: flex;
+	flex-direction: column;
+
+}
+#pergunta{
+	font-size: 16px;
+	margin: 10px;
+	height: 20px;
+	
+}
+.resposta{
 	position: relative;
-	top:100px;
+	top: 150px;
+	padding: 10px 0 20px 0 ;
+	background-color: rgb(66, 244, 131);
+	box-shadow: 0 19px 38px rgba(0,0,0,0.50), 0 15px 12px rgba(0,0,0,0.30);
+	display: none;
+
 }
 
+#mostra{
+	position: absolute;
+	left: 45%;
+	top: 40%;
+	border: none;
+	background-color: rgb(130, 154, 166);
+	box-shadow: 0 19px 38px rgba(0,0,0,0.50), 0 15px 12px rgba(0,0,0,0.30);
+	padding: 30px;
+}
 
+#feito{
+	margin: 10px;
+}
 /*------------------------MEDIAS------------------------*/
-@media all and (max-width: 1366px) {
-	h1{
-		margin: 1em 40% 0 0;
-	}
-	#ansdiv{
-		margin: 2em 0 0 9%;
-	}
 
+@media all and (max-width: 1440px){
+	*{
+		font-size: 30px;
+	}
 }
-
-@media all and (max-width: 1125px){
-	#ansdiv{
-		margin: 2em 0 0 7%;
+@media all and (max-width: 1200px){
+	.ops{
+		white-space: nowrap;
+		min-width: 237px;
 	}
-	#questdiv{
-		font-size: 28px;
+}
+@media all and (max-width: 1050px){
+	#ansdiv{
+		margin: auto;
+		padding: 10% 0 10% 0;
+	}
+	#next{
+		margin-top: 20%;
+	}
+	.ops{
+		width: 55%;
+		margin: 5px auto;
+	}
+}
+@media all and (max-width: 720px){
+	*{
+		font-size: 26px;
+	}
+	#next{
+		margin-top: 30%;
+	}
+	article{
+		width: 100%;
+	}
+	#paginaFinal{
+		width: 100%;
 	}
 }
