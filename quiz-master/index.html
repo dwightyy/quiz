@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<title>QUIZ</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,21 +13,31 @@
 		<article id="paginaPerguntas">
 			<header>
 				<h1>Quiz sobre<br/>GAME OF THRONES</h1>
-				
+
 			</header>
 		<div id="questdiv">
 			<p id="q1">Qual o nome da familia que mantém o titulo de guardiões do norte
 			no inicio da série?</p>
 			<p id = "q2">Qual o nome do filho(a) mais velho(a) de Ned Stark?</p>
 			<p id = "q3">Qual é o nome dos dragões de Daenerys Targaryen?</p>
-			<p id = "q4">esta e minha quarta pergunta</p>
-			<p id = "q5">esta é minha quinta pergunta</p>
-			<p id = "q6">esta é minha sexta pergunta</p>
-			<p id = "q7">esta é minha setima pergunta</p>
-			<p id = "q8">esta é minha oitava pergunta</p>
-			<p id = "q9">esta é minha nona pergunta</p>
-			<p id = "q10">esta é minha ultima pergunta</p>
+			<p id = "q4">Qual o nome do lobo de Jon Snow?</p>
+			<p id = "q5">De qual casa é o lema "Nossa é a furia?"</p>
+			<p id = "q6">Como morre o irmão de Daenarys Targeryan na primeira temporada?</p>
+			<p id = "q7">Qual o nome do metal especial que nunca perde o fio e conse	gue matar os outros?</p>
+			<p id = "q8">Qual o nome da espada de aço variliano que o Senhor Comandante Mormont da à Jon Snow?</p>
+			<p id = "q9">Qual o nome do continente onde se encontra os principais reinos de Game of Thrones?</p>
+			<p id = "q10">De qual casa é o brasão com a seguinte descrição:" Caçador andante, vestido de vermelho em um campo verde"</p>
 		</div>
+		<img src="north.jpg" id="img1">
+		<img src="ned.jpg" id="img2">
+		<img src="drag.jpg" id="img3">
+		<img src="dog.jpg" id="img4">
+		<img src="ours.png" id="img5">
+		<img src="vis.png" id="img6">
+		<img src="ice.jpeg" id="img7">
+		<img src="Longclaw.jpg" id="img8">
+		<img src="west.jpg" id="img9">
+		<img src="tar.jpg" id="img10">
 
 		<div id="ansdiv">
 			<button onclick="getAns(opA)" class="ops" id="op1" type="button">#OP1</button>
@@ -34,18 +45,82 @@
 			<button onclick="getAns(opC)" class="ops" id="op3" type="button">#OP3</button>
 			<button onclick="getAns(opD)" class="ops" id="op4" type="button">#OP4</button>
 		</div>
-			<button onclick=" nextQ(qstList,userAns); opsss()" href="#" id="next">Proxima Pergunta</button>
+			<button onclick=" nextQ(qstList,userAns); opsss()" id="next">Proxima Pergunta</button>
+		<p id="feito" > Feito por Joäo Pedro</p>
 		</article>
 
 		<article id="paginaFinal" >
+			<button id="mostra" onclick="mostraRespostas()">Mostrar resultado :  </button>
+
+			<article class="resps" id="art1">
+			<p id="pergunta">Qual o nome da familia que mantém o titulo de guardiões do norte
+			no inicio da série?</p>
+			<p class="resposta" id="rsp1"></p>
+					
+			</article>
+
+			<article class="resps"  id="art2">
+			<p id="pergunta">Qual o nome do filho(a) mais velho(a) de Ned Stark?</p>
+			<p class="resposta" id="rsp2"></p>
+				
+			</article>
+
+			<article class="resps" id="art3">
+			<p id="pergunta">  Qual é o nome dos dragões de Daenerys Targaryen?</p>
+			<p class="resposta" id="rsp3"></p>
+					
+			</article>
+
+			<article class="resps"  id="art4">
+			<p id="pergunta">Qual o nome do lobo de Jon Snow?                                         s</p>
+			<p class="resposta" id="rsp4"></p>
+				
+			</article>
+
+			<article class="resps"  id="art5">
+			<p id="pergunta">De qual casa é o lema "Nossa é a furia?"</p>	
+			<p class="resposta" id="rsp5"></p>
+			
+			</article>
+
+			<article class="resps"  id="art6">
+			<p id="pergunta">Como morre o irmão de Daenarys Targeryan na primeira temporada?</p>
+			<p class="resposta" id="rsp6"></p>			
+			</article>
+
+			<article class="resps"  id="art7">
+			<p id="pergunta">Qual o nome do metal especial que nunca perde o fio e conse	gue matar os outros?</p>
+			<p class="resposta" id="rsp7"></p>
+			
+			</article>
+
+			<article class="resps"  id="art8">
+			<p id="pergunta">Qual o nome da espada de aço variliano que o Senhor Comandante Mormont da à Jon Snow?</p>
+			<p class="resposta" id="rsp8"></p>
+					
+			</article>
+
+			<article  class="resps" id="art9">
+			<p id="pergunta"> id="pergunta"Qual o nome do continente onde se encontra os principais reinos de Game of Thrones?</p>
+			<p class="resposta" id="rsp9"></p>
+					
+			</article>
+
+			<article class="resps" id="art10">
+			<p id="pergunta" >De qual casa é o brasão com a descrição:" Caçador andante, vestido de vermelho em um campo verde"</p>
+			<p class="resposta" id="rsp10"></p>
+
+			</article>
+
+
+
 			<div id="container" >
 				<p></p>
 				<div id="acertos" class="colunas" >Acertos</div>
 				<div id="erros" class="colunas" >Erros</div>
 			</div>
-			<hr>
-
 		</article>
+		<p id="feito" > Feito por Joäo Pedro</p>
 
 	</section>
 
