@@ -46,13 +46,13 @@ PARA UMA OUTRA LISTA, QUE IRA CONTER SOMENTE A RESPOSTA FINAL DAS QUESTOES.*/
 /*FUNCAO PARA SUMIR COM A ULTIMA PERGUNTA E COLOCAR A NOVA NA TELA, ATRAVES DA DIMINUICAO DE UMA LISTA*/
 var count = 1
 $(document).ready(function(){
-  $("#img1").animate({opacity:1,"left":"710"},2000)
+  $("#img1").animate({opacity:1,"left":"650"},2000)
     $("#next").click(function(){
       $("#img"+count).css("display","none");
       count += 1;
       $("#questdiv").animate({opacity:"0"}, 0).delay(100).animate({opacity:"1"}, 2000)
       $(".ops").animate({opacity:"0"}, 0).delay(100).animate({opacity:"1"}, 2000)
-      $("#img"+count).animate({opacity:1,"left":"710"},2000)
+      $("#img"+count).animate({opacity:1,"left":"650"},2000)
       
       });
   });
